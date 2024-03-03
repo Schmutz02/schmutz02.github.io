@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 1.5vw;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        main {
+            width: 80%;
+            max-width: 1280px;
+            margin: 5vh auto 0 auto;
+        }
+
+        canvas {
+            display: none;
+            width: 100%;
+        }
+
+        #container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        #container>* {
+            padding: 0.5rem 0;
+        }
+
+        #settings {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-column-gap: 1rem;
+        }
+
+        #settings p {
+            margin: 0;
+        }
+
+        .slider {
+            background-color: #d3d3d3;
+            width: 100%;
+        }
+    </style>
+    <title>Offline Ray Tracing Demo</title>
+</head>
+<body>
+    <main>
+        <canvas id="mainCanvas" width="1280" height="720"></canvas>
+        <div id="container">
+            <div>
+                <button id="saveButton" type="button">Save Image</button>
+            </div>
+            <div id="settings">
+                <div>
+                    <p id="scaleOutput">Downscale</p>
+                    <input id="scale" type="range" min="0" max="3" value="1" class="slider">
+                </div>
+                <div>
+                    <p>Samples</p>
+                    <input id="samples" type="number" min="0" max="1000" value="10">
+                    <hr style="visibility: hidden;">
+
+                    <p>Depth</p>
+                    <input id="depth" type="number" min="0" max="100" value="10">
+                </div>
+                <div>
+                    <p style="display: inline;">Animate</p>
+                    <input id="animate" type="checkbox" style="width: 1vw; height: 1vw;" checked>
+                </div>
+                <div style="margin-left: auto;">
+                    <button id="renderButton" type="button">Render</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="structures.js"></script>
+<script src="script.js"></script>
+</html>
