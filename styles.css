@@ -82,6 +82,36 @@ main {
     padding: 50px 1rem 100px 1rem;
 }
 
+nav {
+    background-color: #111E35;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+nav a:link,
+nav a:visited {
+    color: #555;
+}
+
+nav a:focus,
+nav a:hover,
+nav a:active {
+    color: #aaa;
+}
+
+#links {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+#links > a {
+    display: block;
+}
+
 .text {
     max-width: 80ch;
     margin: 0 auto;
