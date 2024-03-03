@@ -106,6 +106,7 @@ nav a:active {
     max-width: 1200px;
     margin: 0 auto;
     gap: 2rem;
+    padding: 0 1rem;
 }
 
 #links > a {
@@ -155,4 +156,10 @@ nav a:active {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+}
+
+@media (max-width: 500px) {
+    header h1 {
+        font-size: 2em;
+    }
 }
