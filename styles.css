@@ -55,30 +55,26 @@ body {
     font-size: 18px;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vmin;
-    max-height: 300px;
-    background-color: black;
-}
-
 #banner {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(media/banner.jpg);
     background-repeat: no-repeat;
     background-position: 50% 0;
     height: 25vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    background-color: black;
 }
 
-header h1 {
+#banner h1 {
     font-size: 3rem;
     color: white;
     text-shadow: 0 0 3px black;
     margin: 0;
 }
 
-main {
+.container {
     padding: 50px 1rem 100px 1rem;
 }
 
@@ -90,13 +86,13 @@ nav {
 
 nav a:link,
 nav a:visited {
-    color: #555;
+    color: #aaa;
 }
 
 nav a:focus,
 nav a:hover,
 nav a:active {
-    color: #aaa;
+    color: #555;
 }
 
 #links {
@@ -159,7 +155,7 @@ nav a:active {
 }
 
 @media (max-width: 500px) {
-    header h1 {
+    #banner h1 {
         font-size: 2em;
     }
 }
